@@ -1,9 +1,13 @@
 import streamlit as st
 import requests
 import json
+import os
+from dotenv import load_dotenv
 
-# Paste your deployed Apps Script URL here
-APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw1rh0x3MKfWOCLoQmQJ-XGog9qDRDC3lP8isdOMZCBn4zZQObOH83orCVFm0BCvb4e/exec"
+load_dotenv()
+
+# APPS_SCRIPT_URL = os.getenv("APPS_SCRIPT_URL")
+APPS_SCRIPT_URL = st.secrets["APPS_SCRIPT_URL"]
 
 st.set_page_config(page_title="Contact Form", page_icon="📋")
 st.title("📋 Contact Form")
