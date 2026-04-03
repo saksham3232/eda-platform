@@ -2,9 +2,6 @@ import streamlit as st
 import requests
 import json
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # APPS_SCRIPT_URL = os.getenv("APPS_SCRIPT_URL")
 APPS_SCRIPT_URL = st.secrets["APPS_SCRIPT_URL"]
