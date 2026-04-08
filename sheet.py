@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
 import json
+import os
+from dotenv import load_dotenv
 
 # 1. Initialize State
 if "name_val" not in st.session_state:
@@ -10,7 +12,9 @@ if "email_val" not in st.session_state:
 if "msg_val" not in st.session_state:
     st.session_state.msg_val = ""
 
-APPS_SCRIPT_URL = st.secrets["APPS_SCRIPT_URL"]
+# APPS_SCRIPT_URL = st.secrets["APPS_SCRIPT_URL"]
+load_dotenv()
+APPS_SCRIPT_URL = os.getenv("APPS_SCRIPT_URL")
 
 st.set_page_config(page_title="Contact Form", page_icon="📋")
 st.title("📋 Contact Form")
