@@ -59,7 +59,7 @@ One-click pipeline to produce ML-ready data:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/eda-platform.git
+git clone https://github.com/saksham3232/eda-platform.git
 cd eda-platform
 
 # 2. Install dependencies
